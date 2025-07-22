@@ -1,82 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Personal Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-    }
-    .navbar {
-      margin-bottom: 30px;
-    }
-    .profile-img {
-      max-width: 200px;
-      border-radius: 50%;
-    }
-    .section {
-      padding: 60px 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f1f1f1;
-      margin-top: 40px;
-    }
-  </style>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Your Name | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#">Your Name</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <!-- Add more tabs as needed -->
-        </ul>
-      </div>
-    </div>
-  </nav>
+<header>
+  <div class="navbar">
+    <a class="logo" href="index.html">Your Name</a>
+    <ul class="navlinks">
+      <li><a href="research.html">Research</a></li>
+      <li><a href="clubs.html">Clubs</a></li>
+      <li><a href="olympiad.html">Science Olympiad</a></li>
+    </ul>
+  </div>
+</header>
 
-  <!-- About Section -->
-  <section id="about" class="section bg-white text-center">
-    <div class="container">
-      <img src="profile.jpg" alt="Profile Picture" class="profile-img mb-4" />
-      <h2>About Me</h2>
-      <p class="lead">[Write a short bio about yourself here. Include your background, interests, etc.]</p>
-    </div>
-  </section>
+<section id="intro">
+  <div class="intro-wrapper">
+    <img src="profile.jpg" alt="Profile picture" class="profile-pic">
 
-  <!-- Research Section -->
-  <section id="research" class="section text-center">
-    <div class="container">
-      <h2>Research</h2>
-      <p class="lead">[Summarize your current research interests and include any relevant links or papers.]</p>
-    </div>
-  </section>
+    <div>
+      <h1>Hello — I’m <span class="highlight">Your Name</span></h1>
+      <p>Write a short introduction or bio here. Highlight your background, passions, and what visitors will find on this site.</p>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section bg-white text-center">
-    <div class="container">
       <h2>Contact</h2>
-      <p class="lead">[Add your email, social links, or a contact form here.]</p>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a><br>
+         LinkedIn: <a href="https://linkedin.com/in/your‑profile" target="_blank">your‑profile</a><br>
+         Twitter: <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a>
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 Your Name. All rights reserved.
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<footer>&copy; 2025 Your Name. All rights reserved.</footer>
 </body>
 </html>
