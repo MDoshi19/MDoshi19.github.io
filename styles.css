@@ -78,3 +78,9 @@ footer{
   text-align:center;padding:1.5rem 1rem;margin-top:4rem;
   font-size:.9rem;color:#777;
 }
+
+/* Override DataTable font and spacing */
+table.dataTable {
+  font-family: inherit;
+  border-radius: 8px;
+}
