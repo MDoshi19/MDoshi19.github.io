@@ -1,0 +1,80 @@
+/* ----------  Palette & base  ---------- */
+:root{
+  --primary:#4e8cff;          /* bright cornflower‑blue */
+  --accent:#ff8c66;           /* soft coral */
+  --bg:#f5f7fa;
+  --text:#212529;
+  --radius:12px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.6;
+  color:var(--text);
+  background:var(--bg);
+}
+
+/* ----------  Navbar  ---------- */
+header{
+  background:#fff;
+  border-bottom:1px solid #e0e6ed;
+  position:sticky;top:0;z-index:999;
+}
+.navbar{
+  max-width:1100px;margin:auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 1.5rem;
+}
+.logo{font-weight:700;font-size:1.25rem;color:var(--primary);text-decoration:none;}
+.navlinks{display:flex;gap:1.25rem;list-style:none;}
+.navlinks a{
+  color:var(--text);text-decoration:none;font-weight:500;position:relative;
+}
+.navlinks a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--accent);transition:.3s;}
+.navlinks a:hover::after{width:100%;}
+
+/* ----------  Sections  ---------- */
+section{max-width:1100px;margin:auto;padding:4rem 1.5rem;}
+h1,h2{margin-bottom:.75rem;color:var(--primary);}
+p{margin-bottom:1rem;}
+.highlight{color:var(--accent);font-weight:600;}
+
+/* Intro two‑column layout */
+.intro-wrapper{
+  display:flex;flex-wrap:wrap;gap:2rem;align-items:center;
+}
+.profile-pic{
+  flex:0 0 250px;height:250px;border-radius:50%;
+  object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+/* Research gallery */
+.gallery{
+  display:grid;gap:1rem;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+.gallery img{width:100%;border-radius:var(--radius);box-shadow:0 2px 6px rgba(0,0,0,.08);}
+
+/* Clubs split */
+.club-grid{
+  display:grid;gap:2rem;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  background:#fff;border-radius:var(--radius);padding:2rem;box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+/* Olympiad table */
+table{
+  width:100%;border-collapse:collapse;margin-top:1.5rem;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+thead{background:var(--primary);color:#fff;}
+th,td{padding:.75rem 1rem;border:1px solid #e5e8ef;text-align:left;}
+tbody tr:nth-child(even){background:#f0f4ff;}
+
+/* ----------  Footer  ---------- */
+footer{
+  text-align:center;padding:1.5rem 1rem;margin-top:4rem;
+  font-size:.9rem;color:#777;
+}
