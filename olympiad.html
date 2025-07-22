@@ -1,9 +1,12 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Your Name | Science Olympiad</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Science Olympiad</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 </head>
 <body>
 
@@ -19,19 +22,53 @@
 </header>
 
 <section>
-  <h1>Science Olympiad</h1>
-  <p>Introduce your involvement — events you compete in, awards, coaching, etc.</p>
+  <h1>Science Olympiad</h1>
+  <p>Here are my exams and materials from various years and events.</p>
 
-  <table>
-    <thead><tr><th>Year</th><th>Event</th><th>Exam Link</th></tr></thead>
+  <table id="examTable" class="display">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Event</th>
+        <th>Exam Link</th>
+      </tr>
+    </thead>
     <tbody>
-      <tr><td>2024</td><td>Astronomy</td><td><a href="exams/astronomy_2024.pdf" target="_blank">Download PDF</a></td></tr>
-      <tr><td>2023</td><td>Cell Biology</td><td><a href="exams/cellbio_2023.pdf" target="_blank">Download PDF</a></td></tr>
+      <tr>
+        <td>2024</td>
+        <td>Astronomy</td>
+        <td><a href="exams/astronomy_2024.pdf" target="_blank">Download PDF</a></td>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td>Cell Biology</td>
+        <td><a href="exams/cellbio_2023.pdf" target="_blank">Download PDF</a></td>
+      </tr>
+      <tr>
+        <td>2022</td>
+        <td>Dynamic Planet</td>
+        <td><a href="exams/dynamicplanet_2022.pdf" target="_blank">Download PDF</a></td>
+      </tr>
       <!-- Add more rows as needed -->
     </tbody>
   </table>
 </section>
 
-<footer>&copy; 2025 Your Name.</footer>
+<footer>&copy; 2025 Your Name.</footer>
+
+<!-- jQuery (required for DataTables) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#examTable').DataTable({
+      paging: false,       // Disable pagination (optional)
+      info: false,         // Hide entry count
+      searching: true,     // Enable search bar
+      order: [[0, 'desc']] // Default sort by Year (descending)
+    });
+  });
+</script>
 </body>
 </html>
